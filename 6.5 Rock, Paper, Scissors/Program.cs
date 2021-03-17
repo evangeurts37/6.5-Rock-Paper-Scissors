@@ -16,7 +16,7 @@ namespace _6._5_Rock__Paper__Scissors
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormRPS());
         }
     }
 }
