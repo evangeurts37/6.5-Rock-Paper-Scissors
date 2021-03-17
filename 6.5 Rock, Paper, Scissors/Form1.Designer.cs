@@ -30,18 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRPS));
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblWordWin = new System.Windows.Forms.Label();
+            this.lblWordLose = new System.Windows.Forms.Label();
+            this.lblWordTie = new System.Windows.Forms.Label();
             this.imgPlayer = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.imgOpponent = new System.Windows.Forms.PictureBox();
             this.radRock = new System.Windows.Forms.RadioButton();
             this.radPaper = new System.Windows.Forms.RadioButton();
             this.radScissors = new System.Windows.Forms.RadioButton();
             this.grpChoice = new System.Windows.Forms.GroupBox();
+            this.lblWins = new System.Windows.Forms.Label();
+            this.lblLoses = new System.Windows.Forms.Label();
+            this.lblTies = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             this.grpChoice.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,42 +56,42 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // label1
+            // lblResult
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(330, 269);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 13);
+            this.lblResult.TabIndex = 1;
             // 
-            // label2
+            // lblWordWin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.lblWordWin.AutoSize = true;
+            this.lblWordWin.Location = new System.Drawing.Point(532, 19);
+            this.lblWordWin.Name = "lblWordWin";
+            this.lblWordWin.Size = new System.Drawing.Size(34, 13);
+            this.lblWordWin.TabIndex = 2;
+            this.lblWordWin.Text = "Wins:";
             // 
-            // label3
+            // lblWordLose
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
+            this.lblWordLose.AutoSize = true;
+            this.lblWordLose.Location = new System.Drawing.Point(532, 41);
+            this.lblWordLose.Name = "lblWordLose";
+            this.lblWordLose.Size = new System.Drawing.Size(38, 13);
+            this.lblWordLose.TabIndex = 3;
+            this.lblWordLose.Text = "Loses:";
             // 
-            // label4
+            // lblWordTie
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(159, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.lblWordTie.AutoSize = true;
+            this.lblWordTie.Location = new System.Drawing.Point(532, 64);
+            this.lblWordTie.Name = "lblWordTie";
+            this.lblWordTie.Size = new System.Drawing.Size(30, 13);
+            this.lblWordTie.TabIndex = 4;
+            this.lblWordTie.Text = "Ties:";
             // 
             // imgPlayer
             // 
@@ -100,15 +103,15 @@
             this.imgPlayer.TabIndex = 5;
             this.imgPlayer.TabStop = false;
             // 
-            // pictureBox2
+            // imgOpponent
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(318, 118);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.imgOpponent.Image = ((System.Drawing.Image)(resources.GetObject("imgOpponent.Image")));
+            this.imgOpponent.Location = new System.Drawing.Point(318, 118);
+            this.imgOpponent.Name = "imgOpponent";
+            this.imgOpponent.Size = new System.Drawing.Size(100, 50);
+            this.imgOpponent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgOpponent.TabIndex = 6;
+            this.imgOpponent.TabStop = false;
             // 
             // radRock
             // 
@@ -158,23 +161,53 @@
             this.grpChoice.TabStop = false;
             this.grpChoice.Text = "Pick One";
             // 
+            // lblWins
+            // 
+            this.lblWins.AutoSize = true;
+            this.lblWins.Location = new System.Drawing.Point(572, 19);
+            this.lblWins.Name = "lblWins";
+            this.lblWins.Size = new System.Drawing.Size(13, 13);
+            this.lblWins.TabIndex = 11;
+            this.lblWins.Text = "0";
+            // 
+            // lblLoses
+            // 
+            this.lblLoses.AutoSize = true;
+            this.lblLoses.Location = new System.Drawing.Point(574, 41);
+            this.lblLoses.Name = "lblLoses";
+            this.lblLoses.Size = new System.Drawing.Size(13, 13);
+            this.lblLoses.TabIndex = 12;
+            this.lblLoses.Text = "0";
+            // 
+            // lblTies
+            // 
+            this.lblTies.AutoSize = true;
+            this.lblTies.Location = new System.Drawing.Point(574, 64);
+            this.lblTies.Name = "lblTies";
+            this.lblTies.Size = new System.Drawing.Size(13, 13);
+            this.lblTies.TabIndex = 13;
+            this.lblTies.Text = "0";
+            // 
             // FormRPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTies);
+            this.Controls.Add(this.lblLoses);
+            this.Controls.Add(this.lblWins);
             this.Controls.Add(this.grpChoice);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.imgOpponent);
             this.Controls.Add(this.imgPlayer);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblWordTie);
+            this.Controls.Add(this.lblWordLose);
+            this.Controls.Add(this.lblWordWin);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnSubmit);
             this.Name = "FormRPS";
             this.Text = "Rock, Paper, Scissors";
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).EndInit();
             this.grpChoice.ResumeLayout(false);
             this.grpChoice.PerformLayout();
             this.ResumeLayout(false);
@@ -185,16 +218,19 @@
         #endregion
 
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblWordWin;
+        private System.Windows.Forms.Label lblWordLose;
+        private System.Windows.Forms.Label lblWordTie;
         private System.Windows.Forms.PictureBox imgPlayer;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox imgOpponent;
         private System.Windows.Forms.RadioButton radRock;
         private System.Windows.Forms.RadioButton radPaper;
         private System.Windows.Forms.RadioButton radScissors;
         private System.Windows.Forms.GroupBox grpChoice;
+        private System.Windows.Forms.Label lblWins;
+        private System.Windows.Forms.Label lblLoses;
+        private System.Windows.Forms.Label lblTies;
     }
 }
 
