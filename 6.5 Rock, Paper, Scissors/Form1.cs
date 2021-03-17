@@ -16,5 +16,30 @@ namespace _6._5_Rock__Paper__Scissors
         {
             InitializeComponent();
         }
+
+        private void radRock_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (radRock.Checked == true)
+            {
+                imgPlayer.Image = Properties.Resources.Rock;
+            }
+
+        }
+
+        private void radPaper_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (radPaper.Checked == true)
+            {
+                imgPlayer.Image = Properties.Resources.Paper;
+            }
+           
+        }
+
+        private void radScissors_CheckedChanged(object sender, EventArgs e)
+        {
+            imgPlayer.Image = Properties.Resources.Scissors;
+        }
     }
 }
