@@ -83,6 +83,16 @@ namespace _6._5_Rock__Paper__Scissors.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rules {
+            get {
+                object obj = ResourceManager.GetObject("Rules", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Scissors {
             get {
                 object obj = ResourceManager.GetObject("Scissors", resourceCulture);

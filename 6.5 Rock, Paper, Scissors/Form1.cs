@@ -121,13 +121,23 @@ namespace _6._5_Rock__Paper__Scissors
             {
                 lblResult.Text = "You Lose";
                 Loses += 1;
-
+                lblLoses.Text = Loses + "";
             }
             else if (OpponentPick == 3 & radScissors.Checked == true)
             {
                 lblResult.Text = "Tie";
                 Ties += 1;
+                lblTies.Text = Ties + "";
             }
         }
+
+        private void btnInstructions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormInstruction f2 = new FormInstruction();
+            f2.ShowDialog();
         }
+
+        
+    }
     } 

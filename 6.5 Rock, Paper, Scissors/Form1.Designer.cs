@@ -43,6 +43,7 @@
             this.lblWins = new System.Windows.Forms.Label();
             this.lblLoses = new System.Windows.Forms.Label();
             this.lblTies = new System.Windows.Forms.Label();
+            this.btnInstructions = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             this.grpChoice.SuspendLayout();
@@ -50,55 +51,61 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(107, 390);
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(41, 263);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(95, 34);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(330, 269);
+            this.lblResult.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(194, 147);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(0, 13);
+            this.lblResult.Size = new System.Drawing.Size(0, 28);
             this.lblResult.TabIndex = 1;
             // 
             // lblWordWin
             // 
             this.lblWordWin.AutoSize = true;
-            this.lblWordWin.Location = new System.Drawing.Point(532, 19);
+            this.lblWordWin.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWordWin.Location = new System.Drawing.Point(427, 21);
             this.lblWordWin.Name = "lblWordWin";
-            this.lblWordWin.Size = new System.Drawing.Size(34, 13);
+            this.lblWordWin.Size = new System.Drawing.Size(62, 25);
             this.lblWordWin.TabIndex = 2;
             this.lblWordWin.Text = "Wins:";
             // 
             // lblWordLose
             // 
             this.lblWordLose.AutoSize = true;
-            this.lblWordLose.Location = new System.Drawing.Point(532, 41);
+            this.lblWordLose.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWordLose.Location = new System.Drawing.Point(421, 46);
             this.lblWordLose.Name = "lblWordLose";
-            this.lblWordLose.Size = new System.Drawing.Size(38, 13);
+            this.lblWordLose.Size = new System.Drawing.Size(68, 25);
             this.lblWordLose.TabIndex = 3;
             this.lblWordLose.Text = "Loses:";
             // 
             // lblWordTie
             // 
             this.lblWordTie.AutoSize = true;
-            this.lblWordTie.Location = new System.Drawing.Point(532, 64);
+            this.lblWordTie.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWordTie.Location = new System.Drawing.Point(436, 71);
             this.lblWordTie.Name = "lblWordTie";
-            this.lblWordTie.Size = new System.Drawing.Size(30, 13);
+            this.lblWordTie.Size = new System.Drawing.Size(53, 25);
             this.lblWordTie.TabIndex = 4;
             this.lblWordTie.Text = "Ties:";
             // 
             // imgPlayer
             // 
             this.imgPlayer.Image = ((System.Drawing.Image)(resources.GetObject("imgPlayer.Image")));
-            this.imgPlayer.Location = new System.Drawing.Point(94, 118);
+            this.imgPlayer.Location = new System.Drawing.Point(12, 12);
             this.imgPlayer.Name = "imgPlayer";
-            this.imgPlayer.Size = new System.Drawing.Size(100, 50);
+            this.imgPlayer.Size = new System.Drawing.Size(156, 93);
             this.imgPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPlayer.TabIndex = 5;
             this.imgPlayer.TabStop = false;
@@ -106,9 +113,9 @@
             // imgOpponent
             // 
             this.imgOpponent.Image = ((System.Drawing.Image)(resources.GetObject("imgOpponent.Image")));
-            this.imgOpponent.Location = new System.Drawing.Point(318, 118);
+            this.imgOpponent.Location = new System.Drawing.Point(233, 12);
             this.imgOpponent.Name = "imgOpponent";
-            this.imgOpponent.Size = new System.Drawing.Size(100, 50);
+            this.imgOpponent.Size = new System.Drawing.Size(158, 93);
             this.imgOpponent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgOpponent.TabIndex = 6;
             this.imgOpponent.TabStop = false;
@@ -118,7 +125,7 @@
             this.radRock.AutoSize = true;
             this.radRock.Location = new System.Drawing.Point(6, 19);
             this.radRock.Name = "radRock";
-            this.radRock.Size = new System.Drawing.Size(51, 17);
+            this.radRock.Size = new System.Drawing.Size(65, 25);
             this.radRock.TabIndex = 7;
             this.radRock.TabStop = true;
             this.radRock.Text = "Rock";
@@ -130,7 +137,7 @@
             this.radPaper.AutoSize = true;
             this.radPaper.Location = new System.Drawing.Point(6, 42);
             this.radPaper.Name = "radPaper";
-            this.radPaper.Size = new System.Drawing.Size(53, 17);
+            this.radPaper.Size = new System.Drawing.Size(72, 25);
             this.radPaper.TabIndex = 8;
             this.radPaper.TabStop = true;
             this.radPaper.Text = "Paper";
@@ -142,7 +149,7 @@
             this.radScissors.AutoSize = true;
             this.radScissors.Location = new System.Drawing.Point(6, 65);
             this.radScissors.Name = "radScissors";
-            this.radScissors.Size = new System.Drawing.Size(64, 17);
+            this.radScissors.Size = new System.Drawing.Size(86, 25);
             this.radScissors.TabIndex = 9;
             this.radScissors.TabStop = true;
             this.radScissors.Text = "Scissors";
@@ -154,9 +161,10 @@
             this.grpChoice.Controls.Add(this.radRock);
             this.grpChoice.Controls.Add(this.radScissors);
             this.grpChoice.Controls.Add(this.radPaper);
-            this.grpChoice.Location = new System.Drawing.Point(50, 246);
+            this.grpChoice.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpChoice.Location = new System.Drawing.Point(12, 128);
             this.grpChoice.Name = "grpChoice";
-            this.grpChoice.Size = new System.Drawing.Size(200, 100);
+            this.grpChoice.Size = new System.Drawing.Size(156, 100);
             this.grpChoice.TabIndex = 10;
             this.grpChoice.TabStop = false;
             this.grpChoice.Text = "Pick One";
@@ -164,35 +172,52 @@
             // lblWins
             // 
             this.lblWins.AutoSize = true;
-            this.lblWins.Location = new System.Drawing.Point(572, 19);
+            this.lblWins.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWins.Location = new System.Drawing.Point(482, 21);
             this.lblWins.Name = "lblWins";
-            this.lblWins.Size = new System.Drawing.Size(13, 13);
+            this.lblWins.Size = new System.Drawing.Size(23, 25);
             this.lblWins.TabIndex = 11;
             this.lblWins.Text = "0";
             // 
             // lblLoses
             // 
             this.lblLoses.AutoSize = true;
-            this.lblLoses.Location = new System.Drawing.Point(574, 41);
+            this.lblLoses.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoses.Location = new System.Drawing.Point(482, 46);
             this.lblLoses.Name = "lblLoses";
-            this.lblLoses.Size = new System.Drawing.Size(13, 13);
+            this.lblLoses.Size = new System.Drawing.Size(23, 25);
             this.lblLoses.TabIndex = 12;
             this.lblLoses.Text = "0";
             // 
             // lblTies
             // 
             this.lblTies.AutoSize = true;
-            this.lblTies.Location = new System.Drawing.Point(574, 64);
+            this.lblTies.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTies.Location = new System.Drawing.Point(482, 71);
             this.lblTies.Name = "lblTies";
-            this.lblTies.Size = new System.Drawing.Size(13, 13);
+            this.lblTies.Size = new System.Drawing.Size(23, 25);
             this.lblTies.TabIndex = 13;
             this.lblTies.Text = "0";
+            // 
+            // btnInstructions
+            // 
+            this.btnInstructions.BackColor = System.Drawing.Color.Violet;
+            this.btnInstructions.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstructions.Location = new System.Drawing.Point(169, 263);
+            this.btnInstructions.Name = "btnInstructions";
+            this.btnInstructions.Size = new System.Drawing.Size(105, 34);
+            this.btnInstructions.TabIndex = 14;
+            this.btnInstructions.Text = "Instructions";
+            this.btnInstructions.UseVisualStyleBackColor = false;
+            this.btnInstructions.Click += new System.EventHandler(this.btnInstructions_Click);
             // 
             // FormRPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(508, 303);
+            this.Controls.Add(this.btnInstructions);
             this.Controls.Add(this.lblTies);
             this.Controls.Add(this.lblLoses);
             this.Controls.Add(this.lblWins);
@@ -231,6 +256,7 @@
         private System.Windows.Forms.Label lblWins;
         private System.Windows.Forms.Label lblLoses;
         private System.Windows.Forms.Label lblTies;
+        private System.Windows.Forms.Button btnInstructions;
     }
 }
 
